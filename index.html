@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeForge - Coding Platform</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a class="brand" href="#home"><span>&lt;/&gt;</span> CodeForge</a>
+    <div class="navlinks">
+      <a href="#problems">Problems</a>
+      <a href="#leaderboard">Leaderboard</a>
+      <a href="#dashboard">Dashboard</a>
+    </div>
+    <div class="nav-actions">
+      <button id="themeBtn" class="icon-btn">☾</button>
+      <button id="loginBtn" class="btn btn-outline">Login</button>
+      <button id="signupBtn" class="btn btn-primary">Sign Up</button>
+    </div>
+  </nav>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-copy">
+        <div class="pill">🚀 Practice. Code. Improve.</div>
+        <h1>Build your coding skills <span>one problem at a time.</span></h1>
+        <p>Practice programming problems, improve problem-solving skills, track your progress and compete with other learners.</p>
+        <div class="hero-buttons">
+          <a href="#problems" class="btn btn-primary big">Start Coding →</a>
+          <a href="#leaderboard" class="btn btn-outline big">View Leaderboard</a>
+        </div>
+        <div class="stats">
+          <div><strong>500+</strong><small>Problems</small></div>
+          <div><strong>20+</strong><small>Topics</small></div>
+          <div><strong>10K+</strong><small>Learners</small></div>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="window-top"><i></i><i></i><i></i><span>solution.java</span></div>
+        <pre><code>class Main {
+  public static void main(String[] args) {
+    int[] arr = {2, 7, 11, 15};
+    int target = 9;
+
+    for (int i = 0; i &lt; arr.length; i++) {
+      for (int j = i + 1; j &lt; arr.length; j++) {
+        if (arr[i] + arr[j] == target) {
+          System.out.println(i + " " + j);
+        }
+      }
+    }
+  }
+}</code></pre>
+        <div class="run-result">✓ Accepted &nbsp; • &nbsp; 42 ms</div>
+      </div>
+    </section>
+
+    <section id="problems" class="section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">CHALLENGE YOURSELF</p>
+          <h2>Practice Problems</h2>
+        </div>
+        <div class="controls">
+          <input id="search" placeholder="Search problems...">
+          <select id="difficulty">
+            <option>All</option><option>Easy</option><option>Medium</option><option>Hard</option>
+          </select>
+        </div>
+      </div>
+      <div id="problemGrid" class="problem-grid"></div>
+    </section>
+
+    <section id="leaderboard" class="section alt">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">COMPETE</p>
+          <h2>Leaderboard</h2>
+        </div>
+      </div>
+      <div id="leaderboardList" class="leaderboard"></div>
+    </section>
+
+    <section id="dashboard" class="section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">YOUR PROGRESS</p>
+          <h2>Dashboard</h2>
+        </div>
+      </div>
+      <div class="dashboard-grid">
+        <div class="dash-card"><span>Problems Solved</span><strong>12</strong><small>Keep going!</small></div>
+        <div class="dash-card"><span>Total Points</span><strong>420</strong><small>+80 this week</small></div>
+        <div class="dash-card"><span>Current Streak</span><strong>7 🔥</strong><small>days</small></div>
+        <div class="dash-card"><span>Rank</span><strong>#128</strong><small>Global</small></div>
+      </div>
+      <div class="progress-card">
+        <div class="progress-head"><h3>Learning Progress</h3><span>48%</span></div>
+        <div class="progress"><div style="width:48%"></div></div>
+        <div class="topics"><span>Arrays</span><span>Strings</span><span>HashMap</span><span>Two Pointers</span></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-box">
+      <button class="close" id="closeModal">×</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <footer>
+    <div><strong>&lt;/&gt; CodeForge</strong><p>An original coding-practice platform project.</p></div>
+    <div><p>Practice • Learn • Build</p></div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
